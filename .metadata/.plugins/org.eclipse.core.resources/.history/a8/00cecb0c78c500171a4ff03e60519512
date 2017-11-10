@@ -1,0 +1,16 @@
+'''
+Created on Nov 9, 2017
+
+@author: aleksandar.novic
+'''
+
+import d4Die
+
+
+
+def main():
+
+    selection = input("Choose one of the official D&D dice: ")
+
+
+main()

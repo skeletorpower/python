@@ -1,0 +1,10 @@
+'''
+Created on Nov 9, 2017
+
+@author: aleksandar.novic
+'''
+
+import random
+
+while True:
+    randNum = random.randrange(1,7)

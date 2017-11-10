@@ -1,0 +1,53 @@
+'''
+Created on Nov 9, 2017
+
+@author: aleksandar.novic
+'''
+
+import random
+
+def rollD6():
+    print(random.randrange(1, 7))
+# rollD6()
+# 
+def rollD4():
+    print(random.randrange(1, 5))
+# rollD4()
+# 
+def rollD8():
+    print(random.randrange(1, 9))
+# rollD8()
+# 
+def rollD10():
+    print(random.randrange(1, 11))
+# rollD10()
+# 
+def rollD12():
+    print(random.randrange(1, 13))
+# rollD12()
+# 
+def rollD20():
+    print(random.randrange(1, 21))
+# rollD20()
+# 
+def rollD100():
+    print(random.randrange(1, 101))
+# rollD100()
+
+while True:
+    selection = input("Choose a dice: ")
+#     options = {
+#         'd4' : rollD4(),
+#         'd6' : rollD6(),
+#         'd8' : rollD8(),
+#         'd10' : rollD10(),
+#         'd12' : rollD12(),
+#         'd20' : rollD20(),
+#         'd100' : rollD100()
+#     }
+    
+    if selection == 'd4':
+        print("Rolled : ", rollD4())
+
+    elif selection == 'd6':
+        print("Rolled : ", rollD6)

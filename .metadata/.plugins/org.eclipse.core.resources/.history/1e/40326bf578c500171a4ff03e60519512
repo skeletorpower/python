@@ -1,0 +1,23 @@
+'''
+Created on Nov 9, 2017
+
+@author: aleksandar.novic
+'''
+
+from d4Die import rollD4
+from d6Die import rollD6
+
+
+def main():
+
+    selection = input("Choose one of the official D&D dice: ")
+    
+    if selection == 'd4':
+        print("You rolled {} on a {}!".format(rollD4(), selection))
+
+    elif selection == 'd6':
+        print("You rolled {} on a {}!".format(rollD6(), selection))
+
+
+
+main()

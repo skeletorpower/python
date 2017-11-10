@@ -1,0 +1,46 @@
+'''
+Created on Nov 9, 2017
+
+@author: aleksandar.novic
+'''
+'''
+attack = {'quick': (lambda: print("Quick attack")),
+          'power': (lambda: print("Power attack")),
+          'miss': (lambda: print("Missed attack"))}
+
+# attack['quick']()
+
+
+import random
+
+attackKey = random.choice(list(attack.keys()))
+
+attack[attackKey]()
+'''
+
+#random flip coin problem
+'''
+import random
+
+flips = []
+
+for i in range(1,101):
+    flips+= random.choice(['h','t'])
+
+print("Heads", flips.count('h'))
+print("Tails", flips.count('t'))
+'''
+import random.randint
+thousandList = list.randint(1, 1000)
+
+print(thousandList)
+
+
+
+
+
+
+
+
+
+
