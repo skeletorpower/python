@@ -1,8 +1,6 @@
-INSTUPtuts.tut13
-D:\Development\py-workspace\PythonTut\tuts\tut13.py
-INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&3|5|2|0
-prime=5
-gen_primes=4
-multiList=1
-tuts.tut13=2
-isprime=3
+INSTUPtuts.tut14
+D:\Development\py-workspace\PythonTut\tuts\tut14.py
+INFOS:&&2|1|2|0&&3|3|2|0
+tuts.tut14=2
+thread=3
+executeThread=1
