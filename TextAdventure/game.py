@@ -6,9 +6,9 @@ Created on Nov 15, 2017
 
 import random
 import textwrap
-import sys
 import os
 import time
+import sys
 # import menu_screens
 
 screen_width = 100
@@ -58,7 +58,7 @@ def titleScreenSelection():
 
 
 def titleScreen():
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print('################################')
     print('#         Text dungeon         #')
     print('################################')
@@ -372,7 +372,7 @@ def main_game_loop():
 
     
 def setup_game():    
-    os.system('clear')
+    os.system('cls')
     
     ### NAME COLLECTING ###
     question1 = 'Hello, who are you?\n'
@@ -436,7 +436,7 @@ def setup_game():
             sys.stdout.flush()
             time.sleep(0.03)
     
-    os.system('clear')
+    os.system('csl')
     print('########################')
     print('# Your journey begins! #')
     print('########################')
