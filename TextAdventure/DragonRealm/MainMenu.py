@@ -6,8 +6,8 @@ Created on Nov 17, 2017
 
 import sys
 import os
-
-
+import time
+from FirstStage import start_game
 
 
 
@@ -16,8 +16,8 @@ def titleScreenSelection():
         option = input('> ')
         options = ['play','help','quit']
         if option.lower() == ('play'):
-#             start_game()
-            pass
+            start_game()
+            
         elif option.lower() == ('help'):
             helpMenu()
         
@@ -52,3 +52,12 @@ def helpMenu():
     print('#########################################################################')
     
     titleScreenSelection()
+    
+    
+def gameOver():
+    narrate = 'GAME OVER'
+    for c in narrate:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(0.1)
+    sys.exit()

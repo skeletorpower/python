@@ -9,42 +9,27 @@ import time
 import sys
 import Actions
 import MainMenu
-
+from Narrator import narrate
 
 def hideFromThreat():
-    narrate = '''You hear big and slow footsteps approaching. Next thing you know, you don't have\n
-    roof on that cute little house of yours. You hear something very big breathing loudly for a few\n
-    moments, then, silence.
-                '''        
-    for c in narrate:
-        sys.stdout.write(c)        
-        sys.stdout.flush()
-        time.sleep(0.01)
+    narrate('''\nYou hear big and slow footsteps approaching. Next thing you know, you don't have\n
+roof on that cute little house of yours. You hear something very big breathing loudly for a few\n
+moments, then, silence.
+''')
 
 def lookAfterHiding():
-    narrate = '''After you get out from hiding you can clearly see that you don't have roof no more.\n
-    Only things you can see is the big giant's back, and the teal colored sky above.
-    Truly a sad day for you.
-                '''        
-    for c in narrate:
-        sys.stdout.write(c)        
-        sys.stdout.flush()
-        time.sleep(0.01)
-
-
-
-
-
-
-
-
+    narrate('''\nAfter you get out from hiding you can clearly see that you don't have roof no more.\n
+Only things you can see is the big giant's back, and the teal colored sky above.
+Truly a sad day for you.
+''')
 
 
 def displayIntro():
-    narator = '''You find yourself in your lovely home. \nYou just added some finishing touches for the new decoration of the kitchen. It looks perfect.
+    narator = '''\nYou find yourself in your lovely home. \nYou just added some finishing touches for the new decoration of the kitchen. It looks perfect.
 As you sit to eat on your newly painted chair you suddenly hear thunderous noise outside.
 People screaming, and the floor shaking.
-What will you do?\n
+What will you do?
+Look/Hide
     
 '''
     for c in narator:
@@ -85,22 +70,26 @@ What will you do?\n
                     if action.lower() != 'hide':
                         if action.lower() == 'look':
                             lookAfterHiding()
-                            narrate = "'This is going to be a great adventure' you think while donning your gear..."
+                            narrate = "'This is going to be a great adventure' you think at least...."
                             for c in narrate:
-                                        sys.stdout.write(c)
-                                        sys.stdout.flush()
-                                        time.sleep(0.01)
+                                sys.stdout.write(c)
+                                sys.stdout.flush()
+                                time.sleep(0.01)
                             print(narrate)
                             print("")
                             MainMenu.displayMainMenu()
             
         
         elif action.lower() == 'look':
-            Actions.look()        
-            print("You fasted toward the window to see what is happening.")
-            print("Apparently, handful of hill giants attacked the village, you can see one coming\n")
-            print("right at your house.")
-            print("What will you do?   Hide/Run")
+            Actions.look()
+            narrate = '''You fasted toward the window to see what is happening.
+Apparently, handful of hill giants attacked the village, you can see one coming right at your house.
+What will you do?   Hide/Run'''   
+            for c in narrate:
+                sys.stdout.write(c)
+                sys.stdout.flush()
+                time.sleep(0.01)     
+            
             while True:
                 action = input('> ')
                 options = ['hide', 'run']
@@ -130,7 +119,7 @@ What will you do?\n
                             if action.lower() != 'hide':
                                 if action.lower() in ['look', 'examine', 'inspect', 'move']:
                                     lookAfterHiding()
-                                    narrate = "'This is going to be a great adventure' you think while doning your gear..."
+                                    narrate = "'This is going to be a great adventure' you think at least..."
                                     for c in narrate:
                                         sys.stdout.write(c)
                                         sys.stdout.flush()
@@ -141,10 +130,16 @@ What will you do?\n
                 
                 if action.lower() == 'run':
                     Actions.run()
-                    pass
-                
-                
-                
+                    narrate = ''', unfortunately the giant sees you and lashes his hand to grab you. He succeeds
+and smashes your body with his hand. Next thing you know, you are in smelly giant's bag full of
+unfortunate souls like yourself. Your fate is sealed.
+'''
+                    for c in narrate:
+                        sys.stdout.write(c)
+                        sys.stdout.flush()
+                        time.sleep(0.02)
+                    MainMenu.gameOver()
+                    
                 
                 
                 

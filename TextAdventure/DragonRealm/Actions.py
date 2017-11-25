@@ -7,11 +7,11 @@ import sys
 import time
 
 
-actions = ['hide', 'run', 'move', 'look', 'quit']
+actions = ['hide', 'run', 'move', 'look', 'listen', 'quit']
 closeActions = ['examine', 'interact', 'inspect']
 
 def run():
-    narator = "You try to run away."
+    narator = "\nYou try to run away"
     for c in narator:
         sys.stdout.write(c)
         sys.stdout.flush()
@@ -24,36 +24,36 @@ def hide():
         sys.stdout.flush()
         time.sleep(0.01)
 
-def move(position):
-    narator = "You moved {}".format(position)
+def move(str):
+    narator = "You moved {}".format(str)
     for c in narator:
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(0.01)
 
 def look():
-    narator = "You look around "
+    narator = "You look around"
     for c in narator:
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(0.01)
     
-def examine(obj):
-    narator = "You examined {}".format(obj)
+def examine(str):
+    narator = "You examined {}".format(str)
     for c in narator:
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(0.01)    
 
-def interact(obj):
-    narator = "You interact with {}".format(obj)
+def interact(str):
+    narator = "You interact with {}".format(str)
     for c in narator:
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(0.01)
 
-def inspect(obj):
-    narator = "You inspected the {}".format(obj)
+def inspect(str):
+    narator = "You inspected the {}".format(str)
     for c in narator:
         sys.stdout.write(c)
         sys.stdout.flush()
